@@ -52,7 +52,7 @@
 
 ### 3.2 配置 MCP Server
 
-将以下配置粘贴到你的 MCP Client 中，并把 `YOUR_MCP_TOKEN` 替换为实际 Token：
+公开配置仅使用 `${MCD_MCP_TOKEN}` 环境变量占位符。请在客户端本地配置令牌，勿将真实令牌提交至仓库；如果客户端不支持环境变量展开，请仅在本地私有配置中填入真实值：
 
 ```json
 {
@@ -61,7 +61,7 @@
       "type": "streamablehttp",
       "url": "https://mcp.mcd.cn",
       "headers": {
-        "Authorization": "Bearer YOUR_MCP_TOKEN"
+        "Authorization": "Bearer ${MCD_MCP_TOKEN}"
       }
     }
   }
@@ -157,6 +157,14 @@ python scripts/optimize_order.py examples/sample_input.json --top 5
 ```
 
 ---
+
+## 当前验证边界
+
+- 已验证服务握手、工具发现、活动/门店/菜单查询及价格计算；没有创建真实订单、支付、兑换积分或验证完整下单链路。
+- 自动领券实测返回业务错误码 `706190`，不能宣称已经成功领券；遇到平台风控应停止重试、说明原因。
+- 未验证优惠券叠加与积分抵现规则。线上价格须由 `calculate-price` 核验，离线脚本的模拟叠券结果不可作为购买依据。
+- 本地算法仅为有限候选集合的演示，不保证全菜单全局最优；营养缺失、重复数量、券互斥等情况需继续完善。
+- 官方要求 `CONTEST_DECLARATION.md` 使用官方原文且内容不可修改；作者署名保留在 `LICENSE`（2026 启脾丸）。
 
 ## 五、项目结构
 

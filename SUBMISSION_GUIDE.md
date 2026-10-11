@@ -1,7 +1,8 @@
 # 提交报名指引 & Issue 内容
 
-> 本文件是给你的操作手册。代码和文档我都准备好了，最后**发布到你的 GitHub 账号**
-> 和**提交 Issue**这两步需要你亲手完成（涉及你的账号凭证与公开身份）。
+> 发布账号：`cumiludageba98-cloud`；公开版权署名：启脾丸；准备日期：2026-10-11。
+> GitHub 授权完成后可由 WorkBuddy 协助推送与创建 Issue，无需将密码或令牌写入仓库。
+> 报名成功以官方系统在 Issue 下的回复为准，而非仅创建 Issue。
 
 ---
 
@@ -43,8 +44,7 @@ git push -u origin main
 | 文件 | 占位符 | 替换为 |
 |---|---|---|
 | `README.md` | `<YOUR_GITHUB_ID>` | 你的 GitHub 用户名 |
-| `CONTEST_DECLARATION.md` | `__YOUR_GITHUB_ID__` | 你的 GitHub 用户名 |
-| `CONTEST_DECLARATION.md` | `2026 年 10 月 __ 日` | 实际签署日期 |
+| `CONTEST_DECLARATION.md` | 无需替换 | 必须使用活动仓库官方原文，内容不可修改；署名放在 LICENSE |
 | `LICENSE` | `<YOUR_NAME>` | 你的名字或 GitHub ID |
 
 替换后：
@@ -78,7 +78,7 @@ https://github.com/M-China/mcd-developer-innovation-challenge/issues
 【参赛申请】
 项目名称：麦麦省钱精算师
 项目地址：https://github.com/cumiludageba98-cloud/mcd-smart-order-saver
-项目简介：麦当劳优惠体系层层叠加，人脑算不清哪单最便宜。麦麦省钱精算师先自动领取全部可领的麦麦省优惠券，再拉取账户券、积分与活动日历，遍历菜品组合并逐组真实比价，输出最低到手价方案对比表 —— 实测单笔可从 30 元压到 17 元。支持预算与热量双约束，精算到付款前一步，下单由你点头。
+项目简介：麦当劳优惠体系层层叠加，人脑算不清哪单最便宜。麦麦省钱精算师先自动领取全部可领的麦麦省优惠券，再拉取账户券、积分与活动日历，遍历菜品组合并逐组真实比价，输出最低到手价方案对比表。支持预算与热量双约束，精算到付款前一步，下单由你点头。
 ```
 
 ### 2.3 提交
@@ -115,7 +115,7 @@ https://github.com/M-China/mcd-developer-innovation-challenge/issues
 mcd-smart-order-saver/
 ├── SKILL.md                  ✅ 技能定义与工作流
 ├── README.md                 ✅ 项目介绍（需替换 GitHub ID）
-├── CONTEST_DECLARATION.md    ✅ 参赛声明（需替换 GitHub ID + 日期）
+├── CONTEST_DECLARATION.md    ✅ 官方原文声明（不得自行增补署名或改写）
 ├── MCP_INTEGRATION.md        ✅ MCP 接入说明
 ├── mcp-config.example.json   ✅ 脱敏配置（仅占位符）
 ├── workbuddy.md              ✅ WorkBuddy 对话上下文
