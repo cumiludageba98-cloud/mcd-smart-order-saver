@@ -1,0 +1,27 @@
+{
+  "items": [
+    {"code": "BIGMAC", "name": "巨无霸", "price": 26.0, "category": "burger", "calories": 550, "tags": ["主食"]},
+    {"code": "MCCHICKEN", "name": "麦香鸡", "price": 17.5, "category": "burger", "calories": 400, "tags": ["主食"]},
+    {"code": "FRIES_M", "name": "中薯条", "price": 13.0, "category": "side", "calories": 340, "tags": ["小食"]},
+    {"code": "FRIES_S", "name": "小薯条", "price": 10.0, "category": "side", "calories": 230, "tags": ["小食"]},
+    {"code": "COLA_M", "name": "中可乐", "price": 9.5, "category": "drink", "calories": 150, "tags": ["饮料"]},
+    {"code": "COLA_S", "name": "小可乐", "price": 8.0, "category": "drink", "calories": 100, "tags": ["饮料"]},
+    {"code": "CONE", "name": "甜筒", "price": 4.0, "category": "dessert", "calories": 200, "tags": ["甜品"]}
+  ],
+  "combos": [
+    {"code": "BIGMAC_COMBO", "name": "巨无霸套餐", "price": 32.0,
+     "contains": ["BIGMAC", "FRIES_M", "COLA_M"], "calories": 1040},
+    {"code": "MCCHICKEN_COMBO", "name": "麦香鸡套餐", "price": 26.0,
+     "contains": ["MCCHICKEN", "FRIES_M", "COLA_M"], "calories": 890}
+  ],
+  "coupons": [
+    {"id": "C1", "name": "满30减8", "type": "threshold", "threshold": 30.0, "discount": 8.0, "applies_to": "all"},
+    {"id": "C2", "name": "巨无霸立减5", "type": "item_discount", "item_code": "BIGMAC", "discount": 5.0, "applies_to": "BIGMAC"},
+    {"id": "C3", "name": "无门槛3元", "type": "threshold", "threshold": 0.0, "discount": 3.0, "applies_to": "all"}
+  ],
+  "constraints": {
+    "budget_max": 25.0,
+    "calories_max": 900,
+    "require_items": ["BIGMAC"]
+  }
+}
